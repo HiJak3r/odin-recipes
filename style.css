@@ -1,13 +1,106 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: rgba(94, 190, 255, 0.6);
-    color: black;
-    font-size: xx-large;
-}
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.5s;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
 
-body {
-    width: 300px;
-    border: 15px solid green;
-    padding: 50px;
-    margin: 200px 700px;
+  .back-button {
+    display: inline-block; /* or you can use 'block' */
+    margin-bottom: 40px;
 }
+  
+  h1 {
+    text-align: center;
+    font-size: 3em;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #333;
+    transform: scale(0);
+    animation: popIn 0.5s forwards;
+  }
+  
+  ul {
+    padding: 0;
+    list-style: none;
+    background: #fff;
+    margin-top: 10px;
+  }
+  
+  ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #f4f4f4;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.5s forwards;
+  }
+  
+  ul li:nth-child(odd) {
+    animation-delay: 0.5s;
+  }
+  
+  ul li:nth-child(even) {
+    animation-delay: 0.7s;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  ul li a:hover {
+    color: #e8491d;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      width: 100%;
+    }
+  
+    ul li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    ul li a, ul li button {
+      margin: 5px 0;
+    }
+  }
+  
+  @keyframes popIn {
+    from {
+      transform: scale(0);
+    }
+  
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
