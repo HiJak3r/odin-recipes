@@ -1,0 +1,23 @@
+body {
+    background-color: lightblue;
+    font-family: sans-serif;
+}
+
+.recipe {
+    margin: auto;
+    width: 50%;
+}
+
+ul {
+    display: table;
+    margin: 0 auto;
+}
+
+.food {
+    border-radius: 50px;
+    display: block;
+    margin: auto;
+    width: 50%;
+    max-height: 400px;
+    max-width: 300px;
+}
